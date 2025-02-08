@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Ubuntu", serif;
+}
+
+.header{
+height: 80px;
+background-color: blue;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 5rem;
+color: white;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.meanu{
+    display: none;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li a{
+   color: white;
+   text-decoration: none;
+   margin: 0 20px;
+}
+
+@media (max-width:900px){
+   .header{
+    padding: 0 3rem;
+    position: relative;
+   }
+
+   .meanu{
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+    position: relative;
+   }
+
+   .meanu i{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    opacity: 0;
+
+    transition: 0.3s ease;
+   }
+
+   .meanu i.active{
+    opacity: 1;
+    transform: rotate(180deg);
+   }
+
+   .navbar{
+    position: absolute;
+    background-color: blue;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 0 3rem;
+    opacity: 0;
+    transition: 0.3s ease;
+   }
+
+   .navbar.active {
+    opacity: 1;
+   }
+
+   .navbar ul{
+    display: block
+   }
+
+   .navbar ul li{
+    margin: 20px 0;
+    border-bottom: 1px solid ;
+    padding-bottom: 10px;
+   }
+
+   
+   .navbar ul li :last-child{
+    border-bottom: none;
+   }
+
+
+   .navbar ul li a{
+    margin: 0;
+   }
+}
